@@ -182,8 +182,7 @@ def main():
     app = QApplication(sys.argv)
 
     # load application style sheet from file
-    stylefile = (Path(QApplication.applicationDirPath()) /
-                 "../pythonsrc/appstyle.qss")
+    stylefile = (Path(__file__).parent / "appstyle.qss")
     with stylefile.open() as f:
         application_style = f.read()
     app.setStyleSheet(application_style)
